@@ -158,7 +158,7 @@
 
 
 
-            Console.WriteLine("\nTryck (enter) för ny operation. (q) för att avsluta.");
+            Console.WriteLine("\nTryck (enter) för Meny.");
 
                 ConsoleKeyInfo key = Console.ReadKey();
 
@@ -168,10 +168,7 @@
                     menu = 1;
 
                 }
-                if (key.Key.Equals(ConsoleKey.Q))
-                {
-                    quit = false;
-                }
+               
             }
         }
         while (quit == true);
