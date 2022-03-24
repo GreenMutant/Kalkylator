@@ -5,11 +5,11 @@
     {
         Console.WriteLine("Välkommen till Kalkylatorn.\n");
         Console.WriteLine("Tryck (enter) för att starta\n");
-        Console.WriteLine("(a) för addition");
-        Console.WriteLine("(s) för subtraktion");
-        Console.WriteLine("(m) för multiplikation");
-        Console.WriteLine("(d) för division");
-        Console.WriteLine("(e) för elevition\n");
+        Console.WriteLine("(a) addition");
+        Console.WriteLine("(s) subtraktion");
+        Console.WriteLine("(m) multiplikation");
+        Console.WriteLine("(d) division");
+        Console.WriteLine("(e) elevition\n");
         Console.WriteLine("Tryck (q) för att avsluta.\n");
     }
     public static int Operation(int val)
@@ -20,9 +20,6 @@
 
         Console.WriteLine("Välj operation (a),(s),(m),(d),(e):");
         inmat = Console.ReadLine();
-
-
-
 
         if (inmat == "a")
             { val = 1; }
@@ -41,6 +38,7 @@
 
             return val;
     }
+
     public static double Addition(double tal1, double tal2)
     {
         double summa = tal1 + tal2;
