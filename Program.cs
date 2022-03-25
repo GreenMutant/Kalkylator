@@ -3,14 +3,15 @@
 
     static void Menu()
     {
-        Console.WriteLine("Välkommen till Kalkylatorn.\n");
-        Console.WriteLine("Tryck (enter) för att starta\n");
+        Console.WriteLine("Kalkylatorn 1.0\n");
+        
         Console.WriteLine("(a) addition");
         Console.WriteLine("(s) subtraktion");
         Console.WriteLine("(m) multiplikation");
         Console.WriteLine("(d) division");
-        Console.WriteLine("(e) elevition\n");
-        Console.WriteLine("Tryck (q) för att avsluta.\n");
+        Console.WriteLine("(e) elevation\n");
+        Console.WriteLine("Tryck (enter) för att starta. (q) för att avsluta.\n");
+        
     }
     public static int Operation(int val)
 
@@ -18,7 +19,7 @@
         string inmat;
         
 
-        Console.WriteLine("Välj operation (a),(s),(m),(d),(e):");
+        Console.WriteLine("Operation (a),(s),(m),(d),(e):");
         inmat = Console.ReadLine();
 
         if (inmat == "a")
@@ -63,7 +64,7 @@
         return summa;
     }
 
-    public static double Elevition(double tal1, double tal2)
+    public static double Elevation(double tal1, double tal2)
     {
         double summa = Math.Pow(tal1, tal2);
      
@@ -76,7 +77,8 @@
         bool quit = true;
         int action = 0;
         string inmat = "noll";
-        
+        double summa = 0;
+
 
         if (menu == 0)
         {
@@ -89,7 +91,7 @@
             if (menu == 1)
             {
                 Menu();
-
+                Console.WriteLine("\nSenaste:" + summa + "\n");
             }
 
 
@@ -117,7 +119,7 @@
                     action = 0;
                 }
 
-                double summa = 0;
+                
 
                 switch (action)
             {
@@ -147,7 +149,7 @@
                     }
                 case 5:
                     {
-                        summa = Elevition(tal1, tal2);
+                        summa = Elevation(tal1, tal2);
                         Console.WriteLine(tal1 + " ^ " + tal2 + " = " + summa);
                         break;
                     }
@@ -158,7 +160,7 @@
 
 
 
-            Console.WriteLine("\nTryck (enter) för Meny.");
+            Console.WriteLine("\nTryck (enter) Return.");
 
                 ConsoleKeyInfo key = Console.ReadKey();
 
